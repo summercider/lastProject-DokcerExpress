@@ -31,7 +31,7 @@ const saleitemBtnRouter = require('./routes/saleitem-btn');
  * 5.쿠키            //  6.세션
  *     + 에러처리, 포트실행
  */
-
+//
 // console.log('✔️ ENV 테스트');
 // console.log('DB_USER:', process.env.DB_USER);
 // console.log('DB_PASSWORD:', process.env.DB_PASSWORD ? 'O' : 'X');

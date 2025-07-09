@@ -36,6 +36,7 @@ jobs:
           echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
           echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
           echo "COOKIE_SECRET=${{ secrets.COOKIE_SECRET }}" >> .env
+          echo "DB_PORT=${{ secrets.DB_PORT }}" >> .env
 
       # EC2_USER 값인 /ubuntu/backend 경로로 소스코드 복사, /backend는 변경 가능하며 서비스마다 달라야
       - name: Upload source code to EC2

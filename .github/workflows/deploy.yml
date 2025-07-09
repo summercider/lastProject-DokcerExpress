@@ -16,11 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 호스트 키 등록
+      # 호스트 키 등록  (-t rsa 옵션추가 rsa키만)
       - name: Add EC2 Host to known_hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -t rsa ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
       # ssh agent로 ssh 인증 준비
       - name: Set up SSH
